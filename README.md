@@ -8,6 +8,7 @@ This project implements a simple retrieval-augmented generation (RAG) system tha
 - Stores them in a vector database
 - Retrieves relevant context for a given query
 - Uses an LLM to generate responses grounded in retrieved data
+- Implements basic chunking and keyword-based retrieval for document search
 
 ## How it works
 1. Documents are split into smaller chunks  
