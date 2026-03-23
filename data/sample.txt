@@ -1,0 +1,3 @@
+Machine learning systems are designed to train models on data and use them for predictions. 
+Retrieval-augmented generation improves LLM responses by providing relevant external context.
+RAG systems use embeddings and vector search to find the most relevant information before generating answers.
