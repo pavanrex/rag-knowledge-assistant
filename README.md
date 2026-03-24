@@ -10,6 +10,7 @@ This project implements a simple retrieval-augmented generation (RAG) system tha
 - Uses an LLM to generate responses grounded in retrieved data
 - Implements basic chunking and keyword-based retrieval for document search
 - Interactive CLI-based query system for testing retrieval and generation
+- Implements simple scoring mechanism to rank retrieved context based on query relevance
 
 ## How it works
 1. Documents are split into smaller chunks  
