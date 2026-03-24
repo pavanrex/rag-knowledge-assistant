@@ -1,15 +1,24 @@
 def simple_retrieval(chunks, query):
-    # naive keyword match (shows logic)
-    results = [chunk for chunk in chunks if query.lower() in chunk.lower()]
+    scored_results = []
     
-    if not results:
-        return chunks[:1]  # fallback
+    for chunk in chunks:
+        score = chunk.lower().count(query.lower())
+        scored_results.append((chunk, score))
     
-    return results
+    # sort by score (higher = more relevant)
+    scored_results.sort(key=lambda x: x[1], reverse=True)
+    
+    # take top result
+    top_chunk, top_score = scored_results[0]
+    
+    return top_chunk, top_score
+
 
 def retrieve(query, chunks):
-    print(f"[Retrieval] Searching for relevant chunks...")
+    print("[Retrieval] Searching for relevant chunks...")
     
-    results = simple_retrieval(chunks, query)
+    context, score = simple_retrieval(chunks, query)
     
-    return " ".join(results)
+    print(f"[Retrieval] Confidence score: {score}")
+    
+    return context
