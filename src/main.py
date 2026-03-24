@@ -16,6 +16,8 @@ def main():
         
         context = retrieve(query, chunks)
         response = generate(context, query)
+
+        print("[System] Retrieved context successfully")
         
         print("\nResponse:")
         print(response)
