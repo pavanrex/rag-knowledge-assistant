@@ -1,4 +1,4 @@
-# RAG Knowledge Assistant
+  # RAG Knowledge Assistant
 
 This project implements a simple retrieval-augmented generation (RAG) system that answers user queries based on custom documents.
 
@@ -9,6 +9,7 @@ This project implements a simple retrieval-augmented generation (RAG) system tha
 - Retrieves relevant context for a given query
 - Uses an LLM to generate responses grounded in retrieved data
 - Implements basic chunking and keyword-based retrieval for document search
+- Interactive CLI-based query system for testing retrieval and generation
 
 ## How it works
 1. Documents are split into smaller chunks  
